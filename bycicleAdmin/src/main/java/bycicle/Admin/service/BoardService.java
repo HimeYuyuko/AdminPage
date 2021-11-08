@@ -30,8 +30,8 @@ public class BoardService {
         for(Board board : boardList) {
             BoardDto boardDto = BoardDto.builder()
                     .id(board.getId())
-                    .author(board.getAuthor())
-                    .title(board.getTitle())
+                    .manager(board.getManager())
+                    .location(board.getLocation())
                     .content(board.getContent())
                     .createdDate(board.getCreatedDate())
                     .build();
@@ -46,8 +46,8 @@ public class BoardService {
 
         BoardDto boardDto = BoardDto.builder()
                 .id(board.getId())
-                .author(board.getAuthor())
-                .title(board.getTitle())
+                .manager(board.getManager())
+                .location(board.getLocation())
                 .content(board.getContent())
                 .createdDate(board.getCreatedDate())
                 .build();

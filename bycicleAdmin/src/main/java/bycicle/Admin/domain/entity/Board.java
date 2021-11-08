@@ -12,7 +12,7 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Getter
-@Entity
+@Entity(name="REPORTLIST")//신고 리스트
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @EntityListeners(AuditingEntityListener.class) /* JPA에게 해당 Entity는 Auditiong 기능을 사용함을 알립니다. */
 public class Board {
@@ -22,10 +22,10 @@ public class Board {
     private Long id;
 
     @Column(length = 10, nullable = false)
-    private String author;
+    private String manager;
 
     @Column(length = 100, nullable = false)
-    private String title;
+    private String location;
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
@@ -38,10 +38,10 @@ public class Board {
     private LocalDateTime modifiedDate;
 
     @Builder
-    public Board(Long id, String author, String title, String content) {
+    public Board(Long id, String manager, String location, String content) {
         this.id = id;
-        this.author = author;
-        this.title = title;
+        this.manager = manager;
+        this.location = location;
         this.content = content;
     }
 }

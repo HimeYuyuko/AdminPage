@@ -2,7 +2,7 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>게시판 - 목록</title>
+    <title>접수 - 목록</title>
     <link rel='stylesheet' href='/webjars/bootstrap/4.5.0/css/bootstrap.min.css'>
 </head>
 <body>
@@ -13,7 +13,7 @@
         <tr class="text-center">
             <th scope="col">#!</th>
             <th scope="col">제목</th>
-            <th scope="col">작성자</th>
+            <th scope="col">접수자</th>
             <th scope="col">작성일</th>
         </tr>
         </thead>
@@ -39,7 +39,7 @@
     <div class="row">
         <div class="col-auto mr-auto"></div>
         <div class="col-auto">
-            <a class="btn btn-primary" th:href="@{/post}" role="button">글쓰기</a>
+            <a class="btn btn-primary" th:href="@{/post}" role="button" target="_blank">글쓰기</a>
         </div>
     </div>
 </div>

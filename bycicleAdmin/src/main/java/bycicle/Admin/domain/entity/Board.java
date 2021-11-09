@@ -20,12 +20,18 @@ public class Board {
     @Id
     @GeneratedValue
     private Long id;
-
+    
+    @Column(length = 10 ,nullable = false)
+    private String title;
+    
     @Column(length = 10, nullable = false)
     private String manager;
 
     @Column(length = 100, nullable = false)
     private String location;
+    
+    @Column(length =100, nullable = false)
+    private String admin;
 
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
@@ -38,10 +44,12 @@ public class Board {
     private LocalDateTime modifiedDate;
 
     @Builder
-    public Board(Long id, String manager, String location, String content) {
+    public Board(Long id, String manager, String location, String content, String admin, String title) {
         this.id = id;
         this.manager = manager;
         this.location = location;
         this.content = content;
+        this.admin = admin;
+        this.title = title;
     }
 }

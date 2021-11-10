@@ -2,8 +2,7 @@
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>게시판 - 글쓰기</title>
-    <link rel='stylesheet' href='/webjars/bootstrap/4.5.0/css/bootstrap.min.css'>
+    <title>신고게시판 - 글쓰기</title>
 </head>
 <body>
 <header th:insert="common/header.html"></header>
@@ -16,9 +15,21 @@
             </div>
         </div>
         <div class="form-group row">
-            <label for="inputAuthor" class="col-sm-2 col-form-label"><strong>작성자</strong></label>
+            <label for="inputAuthor" class="col-sm-2 col-form-label"><strong>접수자</strong></label>
             <div class="col-sm-10">
                 <input type="text" name="author" class="form-control" id="inputAuthor">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputAuthor" class="col-sm-2 col-form-label"><strong>번호 조회</strong></label>
+            <div class="col-sm-10">
+                <input role="button" name="location" class="form-control" id="inputlocation" value = "번호 조회">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputAuthor" class="col-sm-2 col-form-label"><strong>담당자</strong></label>
+            <div class="col-sm-10">
+                <input type="text" name="admin" class="form-control" id="inputadmin" value="담당자 조회">
             </div>
         </div>
         <div class="form-group row">
